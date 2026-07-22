@@ -1,0 +1,55 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: smoke-web
+  namespace: app
+  labels:
+    app: smoke-web
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: smoke-web
+  template:
+    metadata:
+      labels:
+        app: smoke-web
+    spec:
+      containers:
+        - name: nginx
+          image: nginx:1.27-alpine
+          ports:
+            - containerPort: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: smoke-web
+  namespace: app
+spec:
+  selector:
+    app: smoke-web
+  ports:
+    - name: http
+      port: 80
+      targetPort: 80
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: smoke-web
+  namespace: app
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  ingressClassName: nginx
+  rules:
+    - http:
+        paths:
+          - path: /smoke
+            pathType: Prefix
+            backend:
+              service:
+                name: smoke-web
+                port:
+                  number: 80

@@ -1,0 +1,27 @@
+# Java / Maven
+target/
+*.class
+*.jar
+*.war
+*.ear
+.mvn/wrapper/maven-wrapper.jar
+!.mvn/wrapper/maven-wrapper.jar
+
+# IDE
+.idea/
+*.iml
+.vscode/
+*.swp
+.DS_Store
+
+# Ambiente / segredos
+.env
+.env.*
+!.env.example
+*.pem
+credentials.json
+
+# Logs e temporários
+*.log
+tmp/
+.temp/

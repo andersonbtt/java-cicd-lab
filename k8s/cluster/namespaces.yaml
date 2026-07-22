@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: app
+  labels:
+    lab.project: java-cicd-lab
+    lab.purpose: application
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: argocd
+  labels:
+    lab.project: java-cicd-lab
+    lab.purpose: gitops
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: logging
+  labels:
+    lab.project: java-cicd-lab
+    lab.purpose: observability
