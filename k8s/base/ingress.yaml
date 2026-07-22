@@ -1,0 +1,27 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: labjavacicd
+  namespace: app
+  labels:
+    app.kubernetes.io/name: labjavacicd
+    app.kubernetes.io/part-of: java-cicd-lab
+spec:
+  ingressClassName: nginx
+  rules:
+    - http:
+        paths:
+          - path: /api
+            pathType: Prefix
+            backend:
+              service:
+                name: labjavacicd
+                port:
+                  number: 80
+          - path: /actuator
+            pathType: Prefix
+            backend:
+              service:
+                name: labjavacicd
+                port:
+                  number: 80

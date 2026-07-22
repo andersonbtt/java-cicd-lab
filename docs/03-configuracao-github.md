@@ -447,4 +447,4 @@ Se **já** foi para o remoto, rotacione o segredo imediatamente — remover do h
 
 ## Próximo passo
 
-Com o repositório no GitHub, siga para o **Módulo 04 — Criação do projeto Java com Maven** (`docs/04-projeto-java-maven.md`).
+Com o repositório no GitHub, siga para o **Módulo 04 — Criação do projeto Java com Maven** ([04-projeto-java-maven.md](04-projeto-java-maven.md)).
