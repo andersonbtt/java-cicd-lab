@@ -4,8 +4,9 @@ FROM maven:3.9.11-eclipse-temurin-21-alpine AS build
 WORKDIR /workspace
 
 COPY pom.xml .
-COPY src ./src
+RUN mvn -B -q dependency:go-offline
 
+COPY src ./src
 RUN mvn -B -DskipTests package \
   && mv target/*.jar /workspace/app.jar
 

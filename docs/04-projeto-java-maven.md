@@ -425,7 +425,7 @@ kubectl logs -n app -l app.kubernetes.io/name=labjavacicd
 
 ### Build Docker lento na primeira vez
 
-Normal: o stage Maven baixa dependências. Builds seguintes reaproveitam cache de layers se o `pom.xml` não mudou (em setups com cache de layer; este Dockerfile copia `pom` + `src` juntos — otimizaremos no CI no Módulo 05).
+Normal: o stage Maven baixa dependências. O Dockerfile atual copia o `pom.xml` antes do `src/` (`dependency:go-offline`) para melhorar o cache de layers no build local e no GitHub Actions (Módulo 05).
 
 ---
 
