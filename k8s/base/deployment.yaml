@@ -24,7 +24,7 @@ spec:
     spec:
       containers:
         - name: app
-          image: labjavacicd:0.2.0
+          image: labjavacicd:0.3.0
           imagePullPolicy: IfNotPresent
           ports:
             - name: http
