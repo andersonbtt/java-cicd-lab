@@ -6,6 +6,7 @@ metadata:
   labels:
     app.kubernetes.io/name: labjavacicd
     app.kubernetes.io/part-of: java-cicd-lab
+    app.kubernetes.io/component: api
 spec:
   replicas: 1
   selector:
@@ -16,14 +17,21 @@ spec:
       labels:
         app.kubernetes.io/name: labjavacicd
         app.kubernetes.io/part-of: java-cicd-lab
+        app.kubernetes.io/component: api
+      annotations:
+        lab.observability/logging: json
+        lab.observability/request-id-header: X-Request-Id
     spec:
       containers:
         - name: app
-          image: labjavacicd:0.1.0
+          image: labjavacicd:0.2.0
           imagePullPolicy: IfNotPresent
           ports:
             - name: http
               containerPort: 8080
+          env:
+            - name: LOGGING_STRUCTURED
+              value: "true"
           readinessProbe:
             httpGet:
               path: /actuator/health

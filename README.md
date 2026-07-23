@@ -16,6 +16,7 @@ Laboratório hands-on: aplicação Java, pipeline CI/CD e observabilidade (ELK) 
 | 05 — GitHub Actions (CI) | [docs/05-github-actions.md](docs/05-github-actions.md) |
 | 06 — Argo CD (GitOps) | [docs/06-argocd-gitops.md](docs/06-argocd-gitops.md) |
 | 07 — Stack ELK | [docs/07-stack-elk.md](docs/07-stack-elk.md) |
+| 08 — App + ELK | [docs/08-app-integracao-elk.md](docs/08-app-integracao-elk.md) |
 | Fluxo CI/CD (conceitual) | [docs/fluxo-cicd-github.md](docs/fluxo-cicd-github.md) |
 | Cheatsheets | [docs/cheatsheets/README.md](docs/cheatsheets/README.md) |
 
@@ -35,3 +36,4 @@ Laboratório hands-on: aplicação Java, pipeline CI/CD e observabilidade (ELK) 
 5. Configure o CI com o [Módulo 05](docs/05-github-actions.md)
 6. Configure o CD com o [Módulo 06](docs/06-argocd-gitops.md)
 7. Suba o ELK com o [Módulo 07](docs/07-stack-elk.md)
+8. Integre a app ao ELK com o [Módulo 08](docs/08-app-integracao-elk.md)

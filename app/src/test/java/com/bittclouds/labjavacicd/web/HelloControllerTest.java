@@ -1,6 +1,7 @@
 package com.bittclouds.labjavacicd.web;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.header;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
@@ -22,6 +23,14 @@ class HelloControllerTest {
     mockMvc.perform(get("/api/hello"))
         .andExpect(status().isOk())
         .andExpect(jsonPath("$.message").value("Hello from labjavacicd"))
-        .andExpect(jsonPath("$.status").value("ok"));
+        .andExpect(jsonPath("$.status").value("ok"))
+        .andExpect(header().exists(RequestIdFilter.REQUEST_ID_HEADER));
+  }
+
+  @Test
+  void helloPropagatesIncomingRequestId() throws Exception {
+    mockMvc.perform(get("/api/hello").header(RequestIdFilter.REQUEST_ID_HEADER, "test-req-123"))
+        .andExpect(status().isOk())
+        .andExpect(header().string(RequestIdFilter.REQUEST_ID_HEADER, "test-req-123"));
   }
 }
