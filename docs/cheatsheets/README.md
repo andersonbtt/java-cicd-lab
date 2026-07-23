@@ -16,6 +16,7 @@ Referência rápida por ferramenta. Complementa o [Módulo 01 — Setup do ambie
 | Helm | [helm.md](helm.md) |
 | GitHub CLI (`gh`) | [gh.md](gh.md) |
 | Argo CD | [argocd.md](argocd.md) |
+| ELK + Fluent Bit | [elk.md](elk.md) |
 
 ## Fluxo mínimo “lab acordou”
 
