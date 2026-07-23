@@ -15,6 +15,7 @@ Referência rápida por ferramenta. Complementa o [Módulo 01 — Setup do ambie
 | k3d | [k3d.md](k3d.md) |
 | Helm | [helm.md](helm.md) |
 | GitHub CLI (`gh`) | [gh.md](gh.md) |
+| Argo CD | [argocd.md](argocd.md) |
 
 ## Fluxo mínimo “lab acordou”
 

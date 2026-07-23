@@ -14,6 +14,7 @@ Laboratório hands-on: aplicação Java, pipeline CI/CD e observabilidade (ELK) 
 | 03 — Projeto no GitHub | [docs/03-configuracao-github.md](docs/03-configuracao-github.md) |
 | 04 — Projeto Java com Maven | [docs/04-projeto-java-maven.md](docs/04-projeto-java-maven.md) |
 | 05 — GitHub Actions (CI) | [docs/05-github-actions.md](docs/05-github-actions.md) |
+| 06 — Argo CD (GitOps) | [docs/06-argocd-gitops.md](docs/06-argocd-gitops.md) |
 | Fluxo CI/CD (conceitual) | [docs/fluxo-cicd-github.md](docs/fluxo-cicd-github.md) |
 | Cheatsheets | [docs/cheatsheets/README.md](docs/cheatsheets/README.md) |
 
@@ -31,3 +32,4 @@ Laboratório hands-on: aplicação Java, pipeline CI/CD e observabilidade (ELK) 
 3. Configure este repositório com o [Módulo 03](docs/03-configuracao-github.md)
 4. Crie/valide a app com o [Módulo 04](docs/04-projeto-java-maven.md)
 5. Configure o CI com o [Módulo 05](docs/05-github-actions.md)
+6. Configure o CD com o [Módulo 06](docs/06-argocd-gitops.md)

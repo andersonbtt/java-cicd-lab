@@ -1,0 +1,10 @@
+# values mínimos para laboratório local (kind)
+# NÃO use server.insecure=true em produção.
+
+configs:
+  params:
+    server.insecure: true
+
+server:
+  service:
+    type: ClusterIP

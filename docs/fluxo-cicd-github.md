@@ -326,5 +326,5 @@ Se o controle de qualidade falha, a caixa **não** vai para a prateleira.
 ## Próximos documentos
 
 - Prática de CI: [05-github-actions.md](05-github-actions.md)
-- Prática de CD / GitOps: [06-argocd-gitops.md](06-argocd-gitops.md) *(quando disponível)*
+- Prática de CD / GitOps: [06-argocd-gitops.md](06-argocd-gitops.md)
 - Visão do curso: [00-ementa.md](00-ementa.md)

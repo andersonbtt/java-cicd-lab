@@ -1,0 +1,34 @@
+# Application do Argo CD para o laboratório.
+# Substitua <seu-usuario> pelo owner do repositório no GitHub antes de aplicar.
+#
+#   sed "s|<seu-usuario>|$GITHUB_USER|g" application.yaml | kubectl apply -f -
+#
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: labjavacicd
+  namespace: argocd
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  project: default
+
+  source:
+    repoURL: https://github.com/<seu-usuario>/java-cicd-lab.git
+    targetRevision: HEAD
+    path: k8s/overlays/dev
+
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: app
+
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
+      - PrunePropagationPolicy=foreground
+      - PruneLast=true
+
+  revisionHistoryLimit: 5
